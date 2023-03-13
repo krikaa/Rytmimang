@@ -1,8 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+<<<<<<< Updated upstream
 using Melanchall.DryWetMidi.Core;
+=======
 using Melanchall.DryWetMidi.Multimedia;
+>>>>>>> Stashed changes
 
 public class Test : MonoBehaviour
 {
