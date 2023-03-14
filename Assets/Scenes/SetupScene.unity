@@ -804,6 +804,7 @@ GameObject:
   m_Component:
   - component: {fileID: 896242206}
   - component: {fileID: 896242205}
+  - component: {fileID: 896242209}
   - component: {fileID: 896242207}
   - component: {fileID: 896242208}
   m_Layer: 0
@@ -927,6 +928,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &896242209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896242204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 235b536ee2629bd43be2a7cc362c96a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultColor: {r: 0, g: 0, b: 0, a: 1}
+  pressedColor: {r: 1, g: 1, b: 1, a: 1}
+  keyBind: 275
 --- !u!1 &1262415961
 GameObject:
   m_ObjectHideFlags: 0
