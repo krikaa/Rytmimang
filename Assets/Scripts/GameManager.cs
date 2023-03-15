@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,10 +15,20 @@ public class GameManager : MonoBehaviour
 
     public int currentScore;
     public int scorePerNote = 100;
+
+    public int currentCombo;
+    public int comboTracker;
+    public int[] comboThresholds;
+
+    public Text scoreText;
+    public Text comboText;
     // Start is called before the first frame update
     void Start()
     {
         instance = this;
+
+        scoreText.text = "Score: 0";
+        currentCombo = 1;
     }
 
     // Update is called once per frame
@@ -38,12 +49,31 @@ public class GameManager : MonoBehaviour
     public void NoteHit()
     {
         Debug.Log("Hit on Time");
+        
+        if (currentCombo - 1 < comboThresholds.Length)
+        {
+            comboTracker++;
 
-        currentScore += scorePerNote;
+            if (comboThresholds[currentCombo - 1] <= comboTracker)
+            {
+                comboTracker = 0;
+                currentCombo++;
+            }
+        }
+
+        comboText.text = "Combo: x" + currentCombo;
+
+        currentScore += scorePerNote * currentCombo;
+        scoreText.text = "Score: " + currentScore;
     }
 
     public void NoteMissed()
     {
         Debug.Log("Missed Note");
+
+        currentCombo = 1;
+        comboTracker = 0;
+
+        comboText.text = "Combo: x" + currentCombo;
     }
 }
