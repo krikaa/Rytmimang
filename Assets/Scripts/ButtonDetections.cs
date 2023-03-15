@@ -21,6 +21,8 @@ public class ButtonDetections : MonoBehaviour
             if(arrowAligned)
             {
                 gameObject.SetActive(false);
+
+                GameManager.instance.NoteHit();
             }
         }
     }
@@ -38,6 +40,8 @@ public class ButtonDetections : MonoBehaviour
         if (other.tag == "Activator")
         {
             arrowAligned = false;
+
+            GameManager.instance.NoteMissed();
         }
     }
 }

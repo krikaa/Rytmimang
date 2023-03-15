@@ -19,10 +19,10 @@ public class FallingNotes : MonoBehaviour
     {
         if(!startLevel)
         {
-            if(Input.anyKeyDown)
+            /*if(Input.anyKeyDown)
             {
                 startLevel = true;
-            }
+            }*/
         }
         else
         {
