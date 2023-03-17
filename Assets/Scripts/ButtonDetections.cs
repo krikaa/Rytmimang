@@ -37,11 +37,14 @@ public class ButtonDetections : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.tag == "Activator")
+        if(gameObject.activeSelf)
         {
-            arrowAligned = false;
+            if (other.tag == "Activator")
+            {
+                arrowAligned = false;
 
-            GameManager.instance.NoteMissed();
+                GameManager.instance.NoteMissed();
+            }
         }
     }
 }
