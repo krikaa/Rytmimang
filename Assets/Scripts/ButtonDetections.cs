@@ -22,7 +22,23 @@ public class ButtonDetections : MonoBehaviour
             {
                 gameObject.SetActive(false);
 
-                GameManager.instance.NoteHit();
+                switch(Mathf.Abs(transform.position.y))
+                {
+                    case (> 0.15f):
+                        GameManager.instance.BadHit();
+                        Debug.Log("Bad");
+                        break;
+
+                    case (> 0.05f):
+                        GameManager.instance.GoodHit();
+                        Debug.Log("Good");
+                        break;
+
+                    case (<= 0.05f):
+                        GameManager.instance.PerfectHit();
+                        Debug.Log("Perfect");
+                        break;
+                }
             }
         }
     }

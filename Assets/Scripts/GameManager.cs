@@ -14,7 +14,9 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     public int currentScore;
-    public int scorePerNote = 100;
+    public int scoreBadHit = 50;
+    public int scoreGoodHit = 100;
+    public int scorePerfectHit = 200;
 
     public int currentCombo;
     public int comboTracker;
@@ -63,13 +65,30 @@ public class GameManager : MonoBehaviour
 
         comboText.text = "Combo: x" + currentCombo;
 
-        currentScore += scorePerNote * currentCombo;
         scoreText.text = "Score: " + currentScore;
+    }
+
+    public void BadHit()
+    {
+        currentScore += scoreBadHit * currentCombo;
+        NoteHit();
+    }
+
+    public void GoodHit()
+    {
+        currentScore += scoreGoodHit * currentCombo;
+        NoteHit();
+    }
+
+    public void PerfectHit()
+    {
+        currentScore += scorePerfectHit * currentCombo;
+        NoteHit();
     }
 
     public void NoteMissed()
     {
-        Debug.Log("Missed Note");
+        Debug.Log("Missed");
 
         currentCombo = 1;
         comboTracker = 0;
