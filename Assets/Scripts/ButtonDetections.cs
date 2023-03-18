@@ -6,6 +6,7 @@ public class ButtonDetections : MonoBehaviour
 {
     public bool arrowAligned;
     public KeyCode keyBind;
+    public GameObject badEffect, goodEffect, perfectEffect, missEffect; 
 
     // Start is called before the first frame update
     void Start()
@@ -26,16 +27,19 @@ public class ButtonDetections : MonoBehaviour
                 {
                     case (> 0.15f):
                         GameManager.instance.BadHit();
+                        Instantiate(badEffect, transform.position, badEffect.transform.rotation);
                         Debug.Log("Bad");
                         break;
 
                     case (> 0.05f):
                         GameManager.instance.GoodHit();
+                        Instantiate(goodEffect, transform.position, goodEffect.transform.rotation);
                         Debug.Log("Good");
                         break;
 
                     case (<= 0.05f):
                         GameManager.instance.PerfectHit();
+                        Instantiate(perfectEffect, transform.position, perfectEffect.transform.rotation);
                         Debug.Log("Perfect");
                         break;
                 }
@@ -58,7 +62,7 @@ public class ButtonDetections : MonoBehaviour
             if (other.tag == "Activator")
             {
                 arrowAligned = false;
-
+                Instantiate(missEffect, transform.position, missEffect.transform.rotation);
                 GameManager.instance.NoteMissed();
             }
         }
