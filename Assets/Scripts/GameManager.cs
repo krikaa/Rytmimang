@@ -28,6 +28,9 @@ public class GameManager : MonoBehaviour
     public float totalNotes;
     public float badHits, goodHits, perfectHits, missedHits;
 
+    public float totalScore;
+    public float accuracy;
+
     public GameObject scoreboard;
     public Text perfectText, goodText, badText, missedText, accuracyText, totalScoreText, gradeText;
     // Start is called before the first frame update
@@ -65,8 +68,11 @@ public class GameManager : MonoBehaviour
                 perfectText.text = perfectHits.ToString();
                 missedText.text = missedHits.ToString();
 
-                float totalHits = badHits + goodHits + perfectHits;
-                float accuracy = (totalHits / totalNotes) * 100f;
+                float totalscore = maxScore();
+                float accuracy = (currentScore / totalScore) * 100;
+
+                Debug.Log(totalScore);
+                Debug.Log(accuracy);
 
                 accuracyText.text = accuracy.ToString("F1") + "%";
 
@@ -158,5 +164,23 @@ public class GameManager : MonoBehaviour
         comboText.text = "Combo: x" + currentCombo;
 
         missedHits++;
+    }
+
+    public float maxScore()
+    {
+        float total = 0;
+        int comboType;
+        float maxComboNotes = totalNotes;
+
+        for(comboType = 0; comboType < comboThresholds.Length; comboType++)
+        {
+            total += perfectHitScore * (comboType + 1) * comboThresholds[comboType];
+            maxComboNotes -= comboThresholds[comboType];
+        }
+
+        total += perfectHitScore * (comboType + 1) * maxComboNotes;
+
+        Debug.Log(total);
+        return total;
     }
 }
