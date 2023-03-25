@@ -166,19 +166,19 @@ public class GameManager : MonoBehaviour
         missedHits++;
     }
 
-    public float maxScore()
+    public float maxScore() //leiab leveli suurima potentsiaalse skoori
     {
         float total = 0;
         int comboType;
         float maxComboNotes = totalNotes;
 
-        for(comboType = 0; comboType < comboThresholds.Length; comboType++)
+        for(comboType = 0; comboType < comboThresholds.Length; comboType++)          //teeb nii palju kui on m2ngus erinevaid combo koefitsente
         {
-            total += perfectHitScore * (comboType + 1) * comboThresholds[comboType];
-            maxComboNotes -= comboThresholds[comboType];
+            total += perfectHitScore * (comboType + 1) * comboThresholds[comboType]; //comboThresholds[comboType] ehk mitu korda j2rjest tuleb nootidele pihta saada, et combo koefitsent t6useks
+            maxComboNotes -= comboThresholds[comboType];                             //leiab, mitu nooti on levelis j22nud, mille parima ajastusega saadavat tulemust tuleb korrutada suurima comboga
         }
 
-        total += perfectHitScore * (comboType + 1) * maxComboNotes;
+        total += perfectHitScore * (comboType + 1) * maxComboNotes;                  //liidab juurde tulemuse, mis saadakse (maxComboNotes) * (skoor, mis saadakse suurima comboga parimal noodi ajastusel)
 
         Debug.Log(total);
         return total;
