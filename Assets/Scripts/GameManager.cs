@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public int currentScore;
     public int badHitScore = 50;
     public int goodHitScore = 100;
-    public int perfectHitScore = 200;
+    public int perfectHitScore = 150;
 
     public int currentCombo;
     public int comboTracker;
@@ -28,7 +28,6 @@ public class GameManager : MonoBehaviour
     public float totalNotes;
     public float badHits, goodHits, perfectHits, missedHits;
 
-    public float totalScore;
     public float accuracy;
 
     public GameObject scoreboard;
@@ -63,45 +62,39 @@ public class GameManager : MonoBehaviour
             {
                 scoreboard.SetActive(true);
 
-                badText.text = badHits.ToString(); // muudab floati stringiks
+                badText.text = badHits.ToString();                      // muudab floati stringiks
                 goodText.text = goodHits.ToString();
                 perfectText.text = perfectHits.ToString();
                 missedText.text = missedHits.ToString();
 
-                float totalscore = maxScore();
-                float accuracy = (currentScore / totalScore) * 100;
+                float accuracy = (currentScore / maxScore()) * 100;     // t2psus, mis on m2ngus saadud tulemuse ja antud leveli maksimaalse v6imaliku tulemuse protsentuaalne suhe
 
-                Debug.Log(totalScore);
                 Debug.Log(accuracy);
 
                 accuracyText.text = accuracy.ToString("F1") + "%";
 
                 string gradeValue = "F";
 
-                if(accuracy > 50)
+                switch(accuracy)
                 {
-                    gradeValue = "E";
-                    if(accuracy > 60)
-                    {
+                    case (> 95):
+                        gradeValue = "S";
+                        break;
+                    case (> 90):
+                        gradeValue = "A";
+                        break;
+                    case (> 80):
+                        gradeValue = "B";
+                        break;
+                    case (> 70):
+                        gradeValue = "C";
+                        break;
+                    case (> 60):
                         gradeValue = "D";
-                        if(accuracy > 70)
-                        {
-                            gradeValue = "C";
-                            if (accuracy > 80)
-                            {
-                                gradeValue = "B";
-                                if (accuracy > 90)
-                                {
-                                    gradeValue = "A";
-                                    if (accuracy > 95)
-                                    {
-                                        gradeValue = "S";
-
-                                    }
-                                }
-                            }
-                        }
-                    }
+                        break;
+                    case (> 50):
+                        gradeValue = "E";
+                        break;
                 }
                 gradeText.text = gradeValue;
 
@@ -166,20 +159,35 @@ public class GameManager : MonoBehaviour
         missedHits++;
     }
 
-    public float maxScore() //leiab leveli suurima potentsiaalse skoori
+    public float maxScore() // leiab leveli suurima potentsiaalse skoori
     {
         float total = 0;
         int comboType;
-        float maxComboNotes = totalNotes;
+        float nextComboNotes = totalNotes;
+        int maxThreshold = 1;
 
-        for(comboType = 0; comboType < comboThresholds.Length; comboType++)          //teeb nii palju kui on m2ngus erinevaid combo koefitsente
+        if (totalNotes < comboThresholds[0])                                                // juhul, kui levelis on v2hem noote kui minimaalne combo koefitsendi m22r ytleb
         {
-            total += perfectHitScore * (comboType + 1) * comboThresholds[comboType]; //comboThresholds[comboType] ehk mitu korda j2rjest tuleb nootidele pihta saada, et combo koefitsent t6useks
-            maxComboNotes -= comboThresholds[comboType];                             //leiab, mitu nooti on levelis j22nud, mille parima ajastusega saadavat tulemust tuleb korrutada suurima comboga
+            total = totalNotes * perfectHitScore;
         }
+        else
+        {
+            for (comboType = 0; comboType < maxThreshold; comboType++)                      // teeb tsyklit niikaua, kuni maksimaalsest v2iksema comboga noodid on kokku liidetud
+            {
+                total += perfectHitScore * (comboType + 1) * (comboThresholds[comboType]);  // comboThresholds[comboType] ehk mitu korda j2rjest tuleb nootidele pihta saada, et combo koefitsent t6useks
+                nextComboNotes -= comboThresholds[comboType];                               // leiab, mitu nooti on levelis j22nud, millele rakendub veel k6rgema astme combo koefitsent
 
-        total += perfectHitScore * (comboType + 1) * maxComboNotes;                  //liidab juurde tulemuse, mis saadakse (maxComboNotes) * (skoor, mis saadakse suurima comboga parimal noodi ajastusel)
-
+                if ((comboType + 1) != comboThresholds.Length)                              // kontrollib, kas eksisteerib veel j2rgmine combo koefitsent
+                {
+                    if (nextComboNotes > comboThresholds[comboType + 1])                    // kontrollib, kas on alles m6ni noot, millele j2rgmist combo koefitsenti rakendada
+                    {
+                        maxThreshold++;                                                     // kui jah, suurendab tsyklite arvu
+                    }
+                }
+                Debug.Log(total);
+            }
+            total += perfectHitScore * (comboType + 1) * nextComboNotes;                    // liidab juurde ylej22nud noodid, millele saab rakendada suurimat v6imalikku combot
+        }
         Debug.Log(total);
         return total;
     }

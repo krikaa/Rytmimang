@@ -25,19 +25,19 @@ public class ButtonDetections : MonoBehaviour
 
                 switch(Mathf.Abs(transform.position.y))
                 {
-                    case (> 0.15f):
+                    case (> 0.20f):
                         GameManager.instance.BadHit();
                         Instantiate(badEffect, transform.position, badEffect.transform.rotation);
                         Debug.Log("Bad");
                         break;
 
-                    case (> 0.05f):
+                    case (> 0.10f):
                         GameManager.instance.GoodHit();
                         Instantiate(goodEffect, transform.position, goodEffect.transform.rotation);
                         Debug.Log("Good");
                         break;
 
-                    case (<= 0.05f):
+                    case (<= 0.10f):
                         GameManager.instance.PerfectHit();
                         Instantiate(perfectEffect, transform.position, perfectEffect.transform.rotation);
                         Debug.Log("Perfect");
