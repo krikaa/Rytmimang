@@ -21,12 +21,12 @@ public class ButtonControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(keyBind))
+        if (Input.GetKeyDown(keyBind))                 // muudab noole v2rvi nooleklahvi vajutades
         {
             SR.color = pressedColor;
         }
 
-        if (Input.GetKeyUp(keyBind))
+        if (Input.GetKeyUp(keyBind))                   // hoiab default noole v2rvi, kui nooleklahvi ei vajutata
         {
             SR.color = defaultColor;
         }
