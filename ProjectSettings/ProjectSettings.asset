@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: DefaultCompany
   productName: Rytmimang
-  defaultCursor: {fileID: 2800000, guid: 6d09a97986d4d0249b810497d25f5d6f, type: 3}
+  defaultCursor: {fileID: 2800000, guid: 3c321bd5be1eefe4f9802bf89e2e69f8, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1
