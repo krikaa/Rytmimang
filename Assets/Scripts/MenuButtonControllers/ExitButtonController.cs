@@ -18,6 +18,7 @@ public class ExitButtonController : MonoBehaviour
         exitButtonAudio.GetComponent<AudioSource>();
         exitButtonAudio.Play();
         Debug.Log("Exit clicked");
+        Application.Quit();
     }
     public void ChangeToOriginalColor()
     {
