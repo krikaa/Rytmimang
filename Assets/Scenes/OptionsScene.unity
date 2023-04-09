@@ -234,15 +234,15 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 815109257}
-          m_TargetAssemblyTypeName: BackButtonController, Assembly-CSharp
+          m_TargetAssemblyTypeName: GlobalBackButtonController, Assembly-CSharp
           m_MethodName: ChangeScene
-          m_Mode: 1
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 2
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: MenuScene
             m_BoolArgument: 0
           m_CallState: 2
   - eventID: 3
@@ -595,7 +595,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 815109255}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 028da7835de28304b804636e00b9e347, type: 3}
+  m_Script: {fileID: 11500000, guid: 96b7371b1c4a6bb41ab4c7ec5dbc51f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   backButtonIMG: {fileID: 422822323}

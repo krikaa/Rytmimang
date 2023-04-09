@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class BackButtonController : MonoBehaviour
+public class GlobalBackButtonController : MonoBehaviour
 {
     public Image backButtonIMG;
     public AudioSource backButtonAudio;
@@ -18,7 +18,7 @@ public class BackButtonController : MonoBehaviour
         backButtonIMG.GetComponent<Image>().color = lowerOpacityPurple;
         backButtonAudio.GetComponent<AudioSource>();
         backButtonAudio.Play();
-        Debug.Log("Level 1 clicked");
+        Debug.Log("Back clicked");
     }
     public void ChangeToOriginalColor()
     {
@@ -28,8 +28,8 @@ public class BackButtonController : MonoBehaviour
     {
         backButtonIMG.GetComponent<Image>().color = lowerOpacity;
     }
-    public void ChangeScene()
+    public void ChangeScene(string NameOfScene)
     {
-        SceneManager.LoadScene("MenuScene");
+        SceneManager.LoadScene(NameOfScene);
     }
 }
