@@ -11,7 +11,7 @@ public class FallingNotes : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        beatsPerSecond = beatMapTempo / 60f;
+        beatsPerSecond = beatMapTempo / 60f;           // arvutab loo tempo
     }
 
     // Update is called once per frame
@@ -26,7 +26,7 @@ public class FallingNotes : MonoBehaviour
         }
         else
         {
-            transform.position -= new Vector3(0f, beatsPerSecond * Time.deltaTime, 0f);
+            transform.position -= new Vector3(0f, beatsPerSecond * Time.deltaTime, 0f);       // arvutab noodi liikumiskiiruse m66da y-telge
         }
     }
 }

@@ -35,10 +35,10 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        instance = this;
+        instance = this;                                           // kasutab GameManager koodina seda sama koodi
 
-        scoreText.text = "Score: 0";
-        currentCombo = 1;
+        scoreText.text = "Score: 0";                               // annab skoorilugejale algse v22rtuse
+        currentCombo = 1;                                          // annab combolugejale algse v22rtuse
 
         totalNotes = FindObjectsOfType<ButtonDetections>().Length; // leiab k6ik objektid, millel on ButtonDetections
     }                                                              // script kyljes ja tagastab pikkuse floatina
@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
     {
         if (!startMusic)
         {
-            if (Input.anyKeyDown)
+            if (Input.anyKeyDown)                                  // klahvi vajutades hakkab level pihta
             {
                 startMusic = true;
                 FN.startLevel = true;
@@ -58,9 +58,9 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            if(!music.isPlaying && !scoreboard.activeInHierarchy)
+            if(!music.isPlaying && !scoreboard.activeInHierarchy)       // kui level saab l2bi
             {
-                scoreboard.SetActive(true);
+                scoreboard.SetActive(true);                             // siis n2ita skooritabelit
 
                 badText.text = badHits.ToString();                      // muudab floati stringiks
                 goodText.text = goodHits.ToString();
@@ -71,11 +71,11 @@ public class GameManager : MonoBehaviour
 
                 Debug.Log(accuracy);
 
-                accuracyText.text = accuracy.ToString("F1") + "%";
+                accuracyText.text = accuracy.ToString("F1") + "%";      // muudab t2psuse floati stringiks
 
-                string gradeValue = "F";
+                string gradeValue = "F";                                // hindelise tulemuse algne v22rtus
 
-                switch(accuracy)
+                switch(accuracy)                                        // muudab hinnet vastavalt t2psusele
                 {
                     case (> 95):
                         gradeValue = "S";
@@ -98,23 +98,23 @@ public class GameManager : MonoBehaviour
                 }
                 gradeText.text = gradeValue;
 
-                totalScoreText.text = currentScore.ToString();
+                totalScoreText.text = currentScore.ToString();         // muudab tulemuse floati stringiks
             }
         }
     }
 
-    public void NoteHit()
+    public void NoteHit()                                              //arvutab combo koefitsenti ja muudab skoorilugejat ja combolugejat
     {
         Debug.Log("Hit on Time");
         
-        if (currentCombo - 1 < comboThresholds.Length)
+        if (currentCombo - 1 < comboThresholds.Length)                 // kui combo ei ole veel maksimaalne
         {
-            comboTracker++;
+            comboTracker++;                                            // inkrementeeri muutujat, mille piisaval kasvamisel t6useb combo koefitsent 1 v6rra
 
-            if (comboThresholds[currentCombo - 1] <= comboTracker)
+            if (comboThresholds[currentCombo - 1] <= comboTracker)     // kui comboTracker on piisavalt suur
             {
-                comboTracker = 0;
-                currentCombo++;
+                comboTracker = 0;                                      // siis anna j2lle algne v22rtus
+                currentCombo++;                                        // siis t6sta combo koefitsenti
             }
         }
 
@@ -123,31 +123,31 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score: " + currentScore;
     }
 
-    public void BadHit()
+    public void BadHit()                                              // liidab skoorile juurde halva tabamusega saadava skoori * combo koefitsent, kusjuures inkrementeerib halbade tabamuste hulka
     {
         currentScore += badHitScore * currentCombo;
-        NoteHit();
+        NoteHit();                                                    // loeb sisse tabatud noodi
         
         badHits++;
     }
 
-    public void GoodHit()
+    public void GoodHit()                                             // liidab skoorile juurde hea tabamusega saadava skoori * combo koefitsent, kusjuures inkrementeerib heade tabamuste hulka
     {
         currentScore += goodHitScore * currentCombo;
-        NoteHit();
+        NoteHit();                                                    // loeb sisse tabatud noodi
 
         goodHits++;
     }
 
-    public void PerfectHit()
+    public void PerfectHit()                                          // liidab skoorile juurde perfektse tabamusega saadava skoori * combo koefitsent, kusjuures inkrementeerib perfektsete tabamuste hulka
     {
         currentScore += perfectHitScore * currentCombo;
-        NoteHit();
+        NoteHit();                                                    // loeb sisse tabatud noodi
 
         perfectHits++;
     }
 
-    public void NoteMissed()
+    public void NoteMissed()                                          // annab combo koefitsendile ja comboTrackerile algse v22rtuse, kusjuures inkrementeerib tabamata nootide hulka
     {
         Debug.Log("Missed");
 
@@ -159,7 +159,7 @@ public class GameManager : MonoBehaviour
         missedHits++;
     }
 
-    public float maxScore() // leiab leveli suurima potentsiaalse skoori
+    public float maxScore()      // leiab leveli suurima potentsiaalse skoori
     {
         float total = 0;
         int comboType;
