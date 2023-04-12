@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public AudioSource music;
+    public AudioSource hitSound;
 
     public bool startMusic;
 
@@ -40,6 +41,7 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score: 0";                               // annab skoorilugejale algse v22rtuse
         currentCombo = 1;                                          // annab combolugejale algse v22rtuse
 
+        hitSound.GetComponent<AudioSource>();
         totalNotes = FindObjectsOfType<ButtonDetections>().Length; // leiab k6ik objektid, millel on ButtonDetections
     }                                                              // script kyljes ja tagastab pikkuse floatina
 
@@ -106,7 +108,7 @@ public class GameManager : MonoBehaviour
     public void NoteHit()                                              //arvutab combo koefitsenti ja muudab skoorilugejat ja combolugejat
     {
         Debug.Log("Hit on Time");
-        
+        hitSound.Play();
         if (currentCombo - 1 < comboThresholds.Length)                 // kui combo ei ole veel maksimaalne
         {
             comboTracker++;                                            // inkrementeeri muutujat, mille piisaval kasvamisel t6useb combo koefitsent 1 v6rra

@@ -30,6 +30,8 @@ public class OptionsButtonController : MonoBehaviour
     }
     public void ChangeScene()
     {
+        GameObject objectToDelete = GameObject.Find("BackButtonSFX");
+        Destroy(objectToDelete);
         SceneManager.LoadScene("OptionsScene");
     }
 }

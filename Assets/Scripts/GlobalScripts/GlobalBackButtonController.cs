@@ -8,6 +8,7 @@ public class GlobalBackButtonController : MonoBehaviour
 {
     public Image backButtonIMG;
     public AudioSource backButtonAudio;
+    public DontDestroySelectSound destroySound;
 
     Color lowerOpacity = new Color(255, 255, 255, 0.75f);
     Color lowerOpacityPurple = new Color(0.43f, 0.78f, 1, 0.75f);
@@ -30,6 +31,12 @@ public class GlobalBackButtonController : MonoBehaviour
     }
     public void ChangeScene(string NameOfScene)
     {
+        GameObject objectToDelete1 = GameObject.Find("PlayButtonSFX"); // ajutine lahendus kuidas kustutada duplikaat DontDestroyOnLoad objekte
+        GameObject objectToDelete2 = GameObject.Find("OptionsButtonSFX");
+        GameObject objectToDelete3 = GameObject.Find("Level1ButtonSFX");
+        Destroy(objectToDelete1);
+        Destroy(objectToDelete2);
+        Destroy(objectToDelete3);
         SceneManager.LoadScene(NameOfScene);
     }
 }

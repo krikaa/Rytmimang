@@ -7,7 +7,7 @@ public class ButtonControls : MonoBehaviour
 
     private SpriteRenderer SR;
     private Color defaultColor = Color.white;
-    private Color pressedColor = new Color(0.75f, 0f, 0.5f, 1f);
+    private Color pressedColor = new Color(0.8862f, 0.2549f, 1, 1);
 
     public KeyCode keyBind;
 

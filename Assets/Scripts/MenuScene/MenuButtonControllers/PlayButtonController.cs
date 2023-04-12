@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,10 +27,14 @@ public class PlayButtonController : MonoBehaviour
     }
     public void ReduceOpacity()
     {
+        GameObject objectToDelete = GameObject.Find("BackButtonSFX");
+        Destroy(objectToDelete);
         playButtonIMG.GetComponent <Image>().color = lowerOpacity;
     }
     public void ChangeScene()
     {
+        GameObject objectToDelete = GameObject.Find("BackButtonSFX");
+        Destroy(objectToDelete);
         SceneManager.LoadScene("LevelSelectionScene");
     }
 }

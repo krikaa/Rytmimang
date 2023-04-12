@@ -30,6 +30,8 @@ public class Level1ButtonController : MonoBehaviour
     }
     public void ChangeScene()
     {
+        GameObject objectToDelete = GameObject.Find("BackButtonSFX");
+        Destroy(objectToDelete);
         SceneManager.LoadScene("GameScene");
     }
 }
