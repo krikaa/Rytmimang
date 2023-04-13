@@ -18,7 +18,6 @@ public class ExitButtonController : MonoBehaviour
         exitButtonAudio.GetComponent<AudioSource>();
         exitButtonAudio.Play();
         Debug.Log("Exit clicked");
-        Application.Quit();
     }
     public void ChangeToOriginalColor()
     {
@@ -27,5 +26,9 @@ public class ExitButtonController : MonoBehaviour
     public void ReduceOpacity()
     {
         exitButtonIMG.GetComponent<Image>().color = lowerOpacity;
+    }
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
