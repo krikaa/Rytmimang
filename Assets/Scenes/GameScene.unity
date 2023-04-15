@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowAligned: 0
-  keyBind: 274
+  keyBind: 106
   badEffect: {fileID: 196027420719037702, guid: 80f0313c1b945c4478cf1fce9076d2f5, type: 3}
   goodEffect: {fileID: 3668285328837417565, guid: c215b181c087cd343936d40d0e588d68, type: 3}
   perfectEffect: {fileID: 4878753125622349369, guid: 9fc7e838141566c4c8f510947bebacce, type: 3}
@@ -498,7 +498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowAligned: 0
-  keyBind: 276
+  keyBind: 100
   badEffect: {fileID: 196027420719037702, guid: 80f0313c1b945c4478cf1fce9076d2f5, type: 3}
   goodEffect: {fileID: 3668285328837417565, guid: c215b181c087cd343936d40d0e588d68, type: 3}
   perfectEffect: {fileID: 4878753125622349369, guid: 9fc7e838141566c4c8f510947bebacce, type: 3}
@@ -663,7 +663,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowAligned: 0
-  keyBind: 273
+  keyBind: 102
   badEffect: {fileID: 196027420719037702, guid: 80f0313c1b945c4478cf1fce9076d2f5, type: 3}
   goodEffect: {fileID: 3668285328837417565, guid: c215b181c087cd343936d40d0e588d68, type: 3}
   perfectEffect: {fileID: 4878753125622349369, guid: 9fc7e838141566c4c8f510947bebacce, type: 3}
@@ -970,7 +970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 235b536ee2629bd43be2a7cc362c96a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyBind: 274
+  keyBind: 106
 --- !u!61 &558105464
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1319,7 +1319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowAligned: 0
-  keyBind: 274
+  keyBind: 106
   badEffect: {fileID: 196027420719037702, guid: 80f0313c1b945c4478cf1fce9076d2f5, type: 3}
   goodEffect: {fileID: 3668285328837417565, guid: c215b181c087cd343936d40d0e588d68, type: 3}
   perfectEffect: {fileID: 4878753125622349369, guid: 9fc7e838141566c4c8f510947bebacce, type: 3}
@@ -1635,7 +1635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 235b536ee2629bd43be2a7cc362c96a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyBind: 273
+  keyBind: 102
 --- !u!61 &774274425
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1756,7 +1756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowAligned: 0
-  keyBind: 276
+  keyBind: 100
   badEffect: {fileID: 196027420719037702, guid: 80f0313c1b945c4478cf1fce9076d2f5, type: 3}
   goodEffect: {fileID: 3668285328837417565, guid: c215b181c087cd343936d40d0e588d68, type: 3}
   perfectEffect: {fileID: 4878753125622349369, guid: 9fc7e838141566c4c8f510947bebacce, type: 3}
@@ -2071,7 +2071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 235b536ee2629bd43be2a7cc362c96a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyBind: 275
+  keyBind: 107
 --- !u!1 &903611391
 GameObject:
   m_ObjectHideFlags: 0
@@ -3028,7 +3028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowAligned: 0
-  keyBind: 275
+  keyBind: 107
   badEffect: {fileID: 196027420719037702, guid: 80f0313c1b945c4478cf1fce9076d2f5, type: 3}
   goodEffect: {fileID: 3668285328837417565, guid: c215b181c087cd343936d40d0e588d68, type: 3}
   perfectEffect: {fileID: 4878753125622349369, guid: 9fc7e838141566c4c8f510947bebacce, type: 3}
@@ -3448,7 +3448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowAligned: 0
-  keyBind: 273
+  keyBind: 102
   badEffect: {fileID: 196027420719037702, guid: 80f0313c1b945c4478cf1fce9076d2f5, type: 3}
   goodEffect: {fileID: 3668285328837417565, guid: c215b181c087cd343936d40d0e588d68, type: 3}
   perfectEffect: {fileID: 4878753125622349369, guid: 9fc7e838141566c4c8f510947bebacce, type: 3}
@@ -3630,7 +3630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 235b536ee2629bd43be2a7cc362c96a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyBind: 276
+  keyBind: 100
 --- !u!61 &1469117802
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3751,7 +3751,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowAligned: 0
-  keyBind: 275
+  keyBind: 107
   badEffect: {fileID: 196027420719037702, guid: 80f0313c1b945c4478cf1fce9076d2f5, type: 3}
   goodEffect: {fileID: 3668285328837417565, guid: c215b181c087cd343936d40d0e588d68, type: 3}
   perfectEffect: {fileID: 4878753125622349369, guid: 9fc7e838141566c4c8f510947bebacce, type: 3}
@@ -4007,7 +4007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowAligned: 0
-  keyBind: 276
+  keyBind: 100
   badEffect: {fileID: 196027420719037702, guid: 80f0313c1b945c4478cf1fce9076d2f5, type: 3}
   goodEffect: {fileID: 3668285328837417565, guid: c215b181c087cd343936d40d0e588d68, type: 3}
   perfectEffect: {fileID: 4878753125622349369, guid: 9fc7e838141566c4c8f510947bebacce, type: 3}
