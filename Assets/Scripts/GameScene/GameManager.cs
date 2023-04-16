@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
     {
         instance = this;                                           // kasutab GameManager koodina seda sama koodi
 
-        scoreText.text = "Score: 0";                               // annab skoorilugejale algse v22rtuse
+        scoreText.text = "SCORE: 0";                               // annab skoorilugejale algse v22rtuse
         currentCombo = 1;                                          // annab combolugejale algse v22rtuse
 
         hitSound.GetComponent<AudioSource>();
@@ -120,9 +120,9 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        comboText.text = "Combo: x" + currentCombo;
+        comboText.text = "COMBO: X" + currentCombo;
 
-        scoreText.text = "Score: " + currentScore;
+        scoreText.text = "SCORE: " + currentScore;
     }
 
     public void BadHit()                                              // liidab skoorile juurde halva tabamusega saadava skoori * combo koefitsent, kusjuures inkrementeerib halbade tabamuste hulka
@@ -156,7 +156,7 @@ public class GameManager : MonoBehaviour
         currentCombo = 1;
         comboTracker = 0;
 
-        comboText.text = "Combo: x" + currentCombo;
+        comboText.text = "COMBO: x" + currentCombo;
 
         missedHits++;
     }
