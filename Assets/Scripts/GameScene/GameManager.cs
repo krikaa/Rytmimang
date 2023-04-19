@@ -26,7 +26,8 @@ public class GameManager : MonoBehaviour
     public Text scoreText;
     public Text comboText;
 
-    public float totalNotes;
+    public float totalNotes = 0;
+    public float noteCounter = 0;
     public float badHits, goodHits, perfectHits, missedHits;
 
     public float accuracy;
@@ -42,12 +43,16 @@ public class GameManager : MonoBehaviour
         currentCombo = 1;                                          // annab combolugejale algse v22rtuse
 
         hitSound.GetComponent<AudioSource>();
-        totalNotes = FindObjectsOfType<ButtonDetections>().Length; // leiab k6ik objektid, millel on ButtonDetections
-    }                                                              // script kyljes ja tagastab pikkuse floatina
+    }                                                              
 
     // Update is called once per frame
     void Update()
     {
+        if (totalNotes == 0)
+        {
+            totalNotes = FindObjectsOfType<ButtonDetections>().Length; // leiab k6ik objektid, millel on ButtonDetections
+        }                                                              // script kyljes ja tagastab pikkuse floatina
+
         if (!startMusic)
         {
             if (Input.anyKeyDown)                                  // klahvi vajutades hakkab level pihta
@@ -60,7 +65,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            if(!music.isPlaying && !scoreboard.activeInHierarchy)       // kui level saab l2bi
+            if(noteCounter == totalNotes && !scoreboard.activeInHierarchy)       // kui level saab l2bi
             {
                 scoreboard.SetActive(true);                             // siis n2ita skooritabelit
 
@@ -123,6 +128,8 @@ public class GameManager : MonoBehaviour
         comboText.text = "COMBO: X" + currentCombo;
 
         scoreText.text = "SCORE: " + currentScore;
+
+        noteCounter++;
     }
 
     public void BadHit()                                              // liidab skoorile juurde halva tabamusega saadava skoori * combo koefitsent, kusjuures inkrementeerib halbade tabamuste hulka
@@ -159,6 +166,8 @@ public class GameManager : MonoBehaviour
         comboText.text = "COMBO: x" + currentCombo;
 
         missedHits++;
+
+        noteCounter++;
     }
 
     public float maxScore()      // leiab leveli suurima potentsiaalse skoori

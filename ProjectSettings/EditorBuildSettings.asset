@@ -12,9 +12,15 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelSelectionScene.unity
     guid: bd1297db2e19a4c4d9fa1ec11a61f929
   - enabled: 1
+    path: Assets/Scenes/ImportMenuScene.unity
+    guid: b131eb786d383054b9319a0e85144857
+  - enabled: 1
     path: Assets/Scenes/OptionsScene.unity
     guid: 2d9984ab17c2d554282cf009f9fa045e
   - enabled: 1
-    path: Assets/Scenes/GameScene.unity
+    path: Assets/Scenes/Level1Scene.unity
     guid: 9d1a60e2aed7bd940ba80efd00813066
+  - enabled: 1
+    path: Assets/Scenes/ImportScene.unity
+    guid: a0ed8c71570500a48b6d75d3a929f0bc
   m_configObjects: {}
