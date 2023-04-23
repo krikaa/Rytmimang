@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public string highscoreName;
+    public string highgradeName;
+
     public AudioSource music;
     public AudioSource hitSound;
 
@@ -91,7 +96,7 @@ public class GameManager : MonoBehaviour
                         gradeValue = "A";
                         break;
                     case (> 80):
-                        gradeValue = "B";
+                        gradeValue = "b";
                         break;
                     case (> 70):
                         gradeValue = "C";
@@ -106,6 +111,12 @@ public class GameManager : MonoBehaviour
                 gradeText.text = gradeValue;
 
                 totalScoreText.text = currentScore.ToString();         // muudab tulemuse floati stringiks
+
+                if ((PlayerPrefs.GetFloat(highscoreName)) < currentScore)
+                {
+                    PlayerPrefs.SetFloat(highscoreName, currentScore);
+                    PlayerPrefs.SetString(highgradeName, gradeValue);
+                }
             }
         }
     }

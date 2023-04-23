@@ -48,7 +48,7 @@ public class MidiImport : MonoBehaviour
             {
                 time = note.Time / (float)ticksPerQuarterNote;
 
-                if (note.NoteNumber == 48) //C4
+                if (note.NoteNumber == 48) // C4
                 {
                     Instantiate(Note1, new Vector3(Note1.transform.position.x, transform.position.y + time, transform.position.z), Note1.transform.rotation, BeatMap.transform);
                 }
