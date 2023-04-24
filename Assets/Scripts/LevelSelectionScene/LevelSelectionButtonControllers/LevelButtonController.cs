@@ -34,8 +34,6 @@ public class LevelButtonController : MonoBehaviour
     {
         GameObject objectToDelete = GameObject.Find("BackButtonSFX");
         Destroy(objectToDelete);
-        DontDestroyMenuMusic MenuMusic = FindAnyObjectByType<DontDestroyMenuMusic>();
-        Destroy(MenuMusic);
         SceneManager.LoadScene(sceneToLoad);
     }
 }

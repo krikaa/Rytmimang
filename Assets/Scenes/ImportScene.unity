@@ -167,9 +167,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcd6dd5fa06c4f24a8209f90b7951aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: Level1Scene
+  sceneToLoad: ImportScene
   ButtonIMG: {fileID: 1326713356}
-  ButtonAudio: {fileID: 0}
+  ButtonAudio: {fileID: 952087761}
   pauseUI: {fileID: 488223558}
   gameAudio: {fileID: 0}
 --- !u!1 &154293096
@@ -880,9 +880,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneToLoad: 
   ButtonIMG: {fileID: 722837413}
-  ButtonAudio: {fileID: 0}
+  ButtonAudio: {fileID: 952087761}
   pauseUI: {fileID: 488223558}
-  gameAudio: {fileID: 0}
+  gameAudio: {fileID: 1354901374}
 --- !u!1 &566062882
 GameObject:
   m_ObjectHideFlags: 0
@@ -4003,6 +4003,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneToLoad: LevelSelectionScene
   ButtonIMG: {fileID: 1422643222}
-  ButtonAudio: {fileID: 0}
+  ButtonAudio: {fileID: 952087761}
   pauseUI: {fileID: 488223558}
   gameAudio: {fileID: 0}
