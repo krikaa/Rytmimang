@@ -733,6 +733,7 @@ MonoBehaviour:
   sceneToLoad: ImportMenuScene
   levelButtonIMG: {fileID: 2140776856}
   levelButtonAudio: {fileID: 246301862}
+  MenuMusic: {fileID: 0}
 --- !u!1 &797677002
 GameObject:
   m_ObjectHideFlags: 0
@@ -849,8 +850,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300, y: -2.4}
-  m_SizeDelta: {x: 1708, y: 700}
+  m_AnchoredPosition: {x: -295.11, y: 0.0000048876}
+  m_SizeDelta: {x: 1818.479, y: 496.1092}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &857650400
 MonoBehaviour:
@@ -961,7 +962,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: accd2cb8fe7a4174386ad81330812f6c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fcbe6ee902575dc4e855fd610b77c4f6, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1018,7 +1019,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: accd2cb8fe7a4174386ad81330812f6c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 598ea3600562e894ca159159430308ab, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1142,8 +1143,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300, y: 82.7}
-  m_SizeDelta: {x: 1708, y: 700}
+  m_AnchoredPosition: {x: -295.1091, y: 85.08742}
+  m_SizeDelta: {x: 1805.8181, y: 401.4948}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &878816072
 GameObject:
@@ -1319,6 +1320,7 @@ MonoBehaviour:
   sceneToLoad: Level1Scene
   levelButtonIMG: {fileID: 1403506996}
   levelButtonAudio: {fileID: 246301862}
+  MenuMusic: {fileID: 0}
 --- !u!1 &1403506995
 GameObject:
   m_ObjectHideFlags: 0
@@ -1482,8 +1484,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300, y: 168.8}
-  m_SizeDelta: {x: 1708, y: 700}
+  m_AnchoredPosition: {x: -300, y: 170}
+  m_SizeDelta: {x: 1708, y: 453.6511}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1450464057
 GameObject:
@@ -1656,6 +1658,7 @@ MonoBehaviour:
   sceneToLoad: Level3Scene
   levelButtonIMG: {fileID: 857650401}
   levelButtonAudio: {fileID: 246301862}
+  MenuMusic: {fileID: 0}
 --- !u!1 &1527972422
 GameObject:
   m_ObjectHideFlags: 0
@@ -2439,9 +2442,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df290e174d9ca8548a915c6d02e02585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: Level3Scene
+  sceneToLoad: Level2Scene
   levelButtonIMG: {fileID: 878565318}
   levelButtonAudio: {fileID: 246301862}
+  MenuMusic: {fileID: 0}
 --- !u!1 &2140776855
 GameObject:
   m_ObjectHideFlags: 0
@@ -2481,7 +2485,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: accd2cb8fe7a4174386ad81330812f6c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4457e851237bb024bbbbcc218b25b80f, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2605,8 +2609,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300, y: -88.5}
-  m_SizeDelta: {x: 1708, y: 700}
+  m_AnchoredPosition: {x: -238, y: -87}
+  m_SizeDelta: {x: 2922.6929, y: 438.7889}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2145318165
 GameObject:

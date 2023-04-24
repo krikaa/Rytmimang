@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -43,6 +42,9 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         instance = this;                                           // kasutab GameManager koodina seda sama koodi
+
+        GameObject menuMusic = GameObject.FindGameObjectWithTag("MenuMusic");
+        Destroy(menuMusic);
 
         scoreText.text = "SCORE: 0";                               // annab skoorilugejale algse v22rtuse
         currentCombo = 1;                                          // annab combolugejale algse v22rtuse

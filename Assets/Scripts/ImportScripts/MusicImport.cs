@@ -7,7 +7,7 @@ public class MusicImport : MonoBehaviour
 {
     public AudioSource audioSource;
     public AudioClip audioClip;
-    public string musicName = "Highscore.mp3";              //string, mis hoiab imporditava muusikafaili nime
+    public string musicName;              //string, mis hoiab imporditava muusikafaili nime
 
     // Start is called before the first frame update
     void Start()

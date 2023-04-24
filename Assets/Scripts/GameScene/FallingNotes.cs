@@ -26,7 +26,7 @@ public class FallingNotes : MonoBehaviour
         }
         else
         {
-            transform.position -= new Vector3(0f, beatsPerSecond * Time.deltaTime, 0f);       // arvutab noodi liikumiskiiruse m66da y-telge
+            transform.position -= new Vector3(0f, 2 * beatsPerSecond * Time.deltaTime, 0f);       // arvutab noodi liikumiskiiruse m66da y-telge
         }
     }
 }

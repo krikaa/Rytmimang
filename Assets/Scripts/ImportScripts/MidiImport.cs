@@ -10,7 +10,7 @@ public class MidiImport : MonoBehaviour
     public FallingNotes FN;
     public GameObject Note1, Note2, Note3, Note4, BeatMap;
     public MidiFile importedMidi;
-    public string midiName = "test_level.mid";
+    public string midiName;
 
     // Start is called before the first frame update
     void Start()
@@ -46,7 +46,7 @@ public class MidiImport : MonoBehaviour
 
             foreach (var note in importedMidi.GetNotes())
             {
-                time = note.Time / (float)ticksPerQuarterNote;
+                time = note.Time / (float)ticksPerQuarterNote * 2;
 
                 if (note.NoteNumber == 48) // C4
                 {
