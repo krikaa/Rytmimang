@@ -424,7 +424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowAligned: 0
-  keyBind: 100
+  keyBind: 6400000014010000
   badEffect: {fileID: 196027420719037702, guid: 80f0313c1b945c4478cf1fce9076d2f5, type: 3}
   goodEffect: {fileID: 3668285328837417565, guid: c215b181c087cd343936d40d0e588d68, type: 3}
   perfectEffect: {fileID: 4878753125622349369, guid: 9fc7e838141566c4c8f510947bebacce, type: 3}
@@ -638,7 +638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowAligned: 0
-  keyBind: 102
+  keyBind: 6600000011010000
   badEffect: {fileID: 196027420719037702, guid: 80f0313c1b945c4478cf1fce9076d2f5, type: 3}
   goodEffect: {fileID: 3668285328837417565, guid: c215b181c087cd343936d40d0e588d68, type: 3}
   perfectEffect: {fileID: 4878753125622349369, guid: 9fc7e838141566c4c8f510947bebacce, type: 3}
@@ -950,7 +950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 235b536ee2629bd43be2a7cc362c96a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyBind: 106
+  keyBind: 6a00000012010000
 --- !u!61 &558105464
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1299,7 +1299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowAligned: 0
-  keyBind: 106
+  keyBind: 6a00000012010000
   badEffect: {fileID: 196027420719037702, guid: 80f0313c1b945c4478cf1fce9076d2f5, type: 3}
   goodEffect: {fileID: 3668285328837417565, guid: c215b181c087cd343936d40d0e588d68, type: 3}
   perfectEffect: {fileID: 4878753125622349369, guid: 9fc7e838141566c4c8f510947bebacce, type: 3}
@@ -1721,7 +1721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 235b536ee2629bd43be2a7cc362c96a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyBind: 102
+  keyBind: 6600000011010000
 --- !u!61 &774274425
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1842,7 +1842,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowAligned: 0
-  keyBind: 100
+  keyBind: 6400000014010000
   badEffect: {fileID: 196027420719037702, guid: 80f0313c1b945c4478cf1fce9076d2f5, type: 3}
   goodEffect: {fileID: 3668285328837417565, guid: c215b181c087cd343936d40d0e588d68, type: 3}
   perfectEffect: {fileID: 4878753125622349369, guid: 9fc7e838141566c4c8f510947bebacce, type: 3}
@@ -2157,7 +2157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 235b536ee2629bd43be2a7cc362c96a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyBind: 107
+  keyBind: 6b00000013010000
 --- !u!1 &903611391
 GameObject:
   m_ObjectHideFlags: 0
@@ -3831,7 +3831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 235b536ee2629bd43be2a7cc362c96a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyBind: 100
+  keyBind: 6400000014010000
 --- !u!61 &1469117802
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3952,7 +3952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowAligned: 0
-  keyBind: 107
+  keyBind: 6b00000013010000
   badEffect: {fileID: 196027420719037702, guid: 80f0313c1b945c4478cf1fce9076d2f5, type: 3}
   goodEffect: {fileID: 3668285328837417565, guid: c215b181c087cd343936d40d0e588d68, type: 3}
   perfectEffect: {fileID: 4878753125622349369, guid: 9fc7e838141566c4c8f510947bebacce, type: 3}

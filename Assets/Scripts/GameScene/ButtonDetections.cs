@@ -5,7 +5,7 @@ using UnityEngine;
 public class ButtonDetections : MonoBehaviour
 {
     public bool arrowAligned;
-    public KeyCode keyBind;
+    public List<KeyCode> keyBind;
     public GameObject badEffect, goodEffect, perfectEffect, missEffect; 
 
     // Start is called before the first frame update
@@ -17,7 +17,7 @@ public class ButtonDetections : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(keyBind))                                                                    // kui nooleklahvi vajutatakse
+        if(ButtonControls.GetAnyKeyDown(keyBind))                                                                    // kui nooleklahvi vajutatakse
         {
             if(arrowAligned)                                                                             // kui noot on samal positsioonil noolega
             {
