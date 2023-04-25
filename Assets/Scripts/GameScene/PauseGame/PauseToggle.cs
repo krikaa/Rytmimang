@@ -7,10 +7,11 @@ public class PauseToggle : MonoBehaviour
     public KeyCode keyBind;
     public AudioSource gameAudio;
     public GameObject pauseUI;
+    public GameObject scoreboard;
 
     void Update()
     {
-        if (Input.GetKeyDown(keyBind))
+        if (Input.GetKeyDown(keyBind) && !scoreboard.activeInHierarchy)
         {
             if (Time.timeScale == 1)
             {

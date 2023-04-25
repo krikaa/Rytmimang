@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
 
     public bool startMusic;
     public GameObject startMenu;
+    public GameObject pauseMenu;
 
     public FallingNotes FN;
 
@@ -77,6 +78,7 @@ public class GameManager : MonoBehaviour
             if(noteCounter == totalNotes && !scoreboard.activeInHierarchy)       // kui level saab l2bi
             {
                 scoreboard.SetActive(true);                             // siis n2ita skooritabelit
+                pauseMenu.SetActive(false);
 
                 badText.text = badHits.ToString();                      // muudab floati stringiks
                 goodText.text = goodHits.ToString();
