@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class GlobalBackButtonController : MonoBehaviour
 {
+    public string nextScene;
     public Image backButtonIMG;
     public AudioSource backButtonAudio;
     public DontDestroySelectSound destroySound;
@@ -25,18 +26,19 @@ public class GlobalBackButtonController : MonoBehaviour
     {
         backButtonIMG.GetComponent<Image>().color = imgOriginalColor;
     }
+
     public void ReduceOpacity()
     {
         backButtonIMG.GetComponent<Image>().color = lowerOpacity;
     }
-    public void ChangeScene(string NameOfScene)
+    public void ChangeScene(string nextScene)
     {
         GameObject objectToDelete1 = GameObject.Find("PlayButtonSFX"); // ajutine lahendus kuidas kustutada duplikaat DontDestroyOnLoad objekte
         GameObject objectToDelete2 = GameObject.Find("OptionsButtonSFX");
-        GameObject objectToDelete3 = GameObject.Find("Level1ButtonSFX");
+        GameObject objectToDelete3 = GameObject.Find("LevelButtonSFX");
         Destroy(objectToDelete1);
         Destroy(objectToDelete2);
         Destroy(objectToDelete3);
-        SceneManager.LoadScene(NameOfScene);
+        SceneManager.LoadScene(nextScene);
     }
 }

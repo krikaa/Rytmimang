@@ -30,7 +30,7 @@ public class LevelButtonController : MonoBehaviour
     {
         levelButtonIMG.GetComponent<Image>().color = lowerOpacity;
     }
-    public void ChangeScene()
+    public void ChangeScene(string sceneToLoad)
     {
         GameObject objectToDelete = GameObject.Find("BackButtonSFX");
         Destroy(objectToDelete);

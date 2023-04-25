@@ -909,8 +909,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 960, y: 540.49316}
-  m_SizeDelta: {x: 1921.7535, y: 1080.9863}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1096351225
 MonoBehaviour:
@@ -949,7 +949,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1096351223}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
   m_Name: 
@@ -1029,6 +1029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96b7371b1c4a6bb41ab4c7ec5dbc51f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextScene: 
   backButtonIMG: {fileID: 1537380344}
   backButtonAudio: {fileID: 113770201}
   destroySound: {fileID: 0}
@@ -1209,13 +1210,13 @@ MonoBehaviour:
         - m_Target: {fileID: 1296178650}
           m_TargetAssemblyTypeName: LevelButtonController, Assembly-CSharp
           m_MethodName: ChangeScene
-          m_Mode: 1
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: ImportScene
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!222 &1403506999
