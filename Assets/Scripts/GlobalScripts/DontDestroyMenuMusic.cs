@@ -1,10 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class DontDestroyMenuMusic : MonoBehaviour
 {
+    [SerializeField] AudioMixer masterMixer;
+    void Start()
+    {
+        float volume = PlayerPrefs.GetFloat("SavedMasterVolume");
+        masterMixer.SetFloat("MasterVolume", Mathf.Log10(volume / 100) * 20f);
+    }
     void Update()
     {
         string sceneName = SceneManager.GetActiveScene().name;

@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public AudioSource hitSound;
 
     public bool startMusic;
+    public GameObject startMenu;
 
     public FallingNotes FN;
 
@@ -66,7 +67,8 @@ public class GameManager : MonoBehaviour
             {
                 startMusic = true;
                 FN.startLevel = true;
-
+                
+                startMenu.SetActive(false);
                 music.Play();
             }
         }
