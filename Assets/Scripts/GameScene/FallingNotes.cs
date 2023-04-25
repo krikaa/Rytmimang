@@ -5,18 +5,22 @@ using UnityEngine;
 public class FallingNotes : MonoBehaviour
 {
     public float beatMapTempo;
-    public float beatsPerSecond;
+    public float beatsPerSecond = 0;
     public bool startLevel;
 
     // Start is called before the first frame update
     void Start()
     {
-        beatsPerSecond = beatMapTempo / 60f;           // arvutab loo tempo
+                  
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (beatsPerSecond == 0)
+        {
+            beatsPerSecond = beatMapTempo / 60f;    // arvutab loo tempo
+        }
         if(!startLevel)
         {
             /*if(Input.anyKeyDown)

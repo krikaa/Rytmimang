@@ -156,9 +156,9 @@ RectTransform:
   m_Father: {fileID: 203355089}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -472, y: -138.63}
+  m_AnchorMin: {x: 0.2585625, y: 0.44130424}
+  m_AnchorMax: {x: 0.2585625, y: 0.44130424}
+  m_AnchoredPosition: {x: -10, y: 0.0000076293945}
   m_SizeDelta: {x: 585.614, y: 503.86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &110695335
@@ -188,14 +188,14 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 50
-    m_Alignment: 0
+    m_Alignment: 6
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "TO impOrt a lEvel:\n\n1.   make a midi file with\n\tdesired nOtes at\n\tC4
-    C#4 D4 D#4\n\n2.   name the files \n\tmidi. mid and musiC. mp3\n\n3. \tadd the
+  m_Text: "TO impOrt a lEvel:\n\n1.\tmake a midi file with\n\tdesired nOtes at\n\tC4
+    C#4 D4 D#4\n\n2.\tname the files \n\tmidi. mid and musiC. mp3\n\n3. \tadd the
     files tO \n\tthe ImpOrt FOlder"
 --- !u!222 &110695336
 CanvasRenderer:
@@ -761,9 +761,9 @@ RectTransform:
   m_Father: {fileID: 677169177}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -44, y: -150.38}
+  m_AnchorMin: {x: 0.106000006, y: 0.17361483}
+  m_AnchorMax: {x: 0.106000006, y: 0.17361483}
+  m_AnchoredPosition: {x: 355, y: 22.00499}
   m_SizeDelta: {x: 1915.7153, y: 300.7502}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &677169176
