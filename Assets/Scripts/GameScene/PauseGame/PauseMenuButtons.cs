@@ -31,10 +31,13 @@ public class PauseMenuButtons : MonoBehaviour
     {
         ButtonIMG.GetComponent<Image>().color = lowerOpacity;
     }
-    public void ChangeScene()
+    public void ChangeScene(string sceneToLoad)
     {
         GameObject objectToDelete = GameObject.Find("BackButtonSFX");
+        GameObject objectToDelete2 = GameObject.Find("LevelSelectionSFX");
         Destroy(objectToDelete);
+        Destroy(objectToDelete);
+        Destroy(objectToDelete2);
         Time.timeScale = 1;
         SceneManager.LoadScene(sceneToLoad);
     }

@@ -2797,6 +2797,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96b7371b1c4a6bb41ab4c7ec5dbc51f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextScene: 
   backButtonIMG: {fileID: 1238013977}
   backButtonAudio: {fileID: 952087761}
   destroySound: {fileID: 0}
@@ -3021,7 +3022,7 @@ GameObject:
   - component: {fileID: 1238013980}
   - component: {fileID: 1238013979}
   - component: {fileID: 1238013977}
-  - component: {fileID: 1238013978}
+  - component: {fileID: 1238013981}
   m_Layer: 5
   m_Name: BackButtonIMG
   m_TagString: Untagged
@@ -3059,35 +3060,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1238013978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1238013976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 3
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1033206995}
-          m_TargetAssemblyTypeName: GlobalBackButtonController, Assembly-CSharp
-          m_MethodName: ChangeScene
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: LevelSelectionScene
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!222 &1238013979
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3116,6 +3088,95 @@ RectTransform:
   m_AnchoredPosition: {x: 471, y: -285.34}
   m_SizeDelta: {x: 1261.776, y: 517.121}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1238013981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238013976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1033206995}
+          m_TargetAssemblyTypeName: GlobalBackButtonController, Assembly-CSharp
+          m_MethodName: ReduceOpacity
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1033206995}
+          m_TargetAssemblyTypeName: GlobalBackButtonController, Assembly-CSharp
+          m_MethodName: ChangeToOriginalColor
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1033206995}
+          m_TargetAssemblyTypeName: GlobalBackButtonController, Assembly-CSharp
+          m_MethodName: ReduceOpacityAndDarken
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1033206995}
+          m_TargetAssemblyTypeName: GlobalBackButtonController, Assembly-CSharp
+          m_MethodName: ChangeToOriginalColor
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1033206995}
+          m_TargetAssemblyTypeName: GlobalBackButtonController, Assembly-CSharp
+          m_MethodName: ChangeScene
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: LevelSelectionScene
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1243150704
 GameObject:
   m_ObjectHideFlags: 0
@@ -3523,7 +3584,7 @@ GameObject:
   - component: {fileID: 1432800321}
   - component: {fileID: 1432800322}
   m_Layer: 0
-  m_Name: PauseBackButtonController
+  m_Name: ' MainMenuButtonController'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3574,7 +3635,7 @@ GameObject:
   - component: {fileID: 1462754211}
   - component: {fileID: 1462754210}
   m_Layer: 5
-  m_Name: PauseBackButtonIMG
+  m_Name: MainMenuButtonIMG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3680,7 +3741,7 @@ MonoBehaviour:
         - m_Target: {fileID: 1432800322}
           m_TargetAssemblyTypeName: PauseMenuButtons, Assembly-CSharp
           m_MethodName: ChangeScene
-          m_Mode: 1
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4158,13 +4219,13 @@ MonoBehaviour:
         - m_Target: {fileID: 123458305}
           m_TargetAssemblyTypeName: PauseMenuButtons, Assembly-CSharp
           m_MethodName: ChangeScene
-          m_Mode: 1
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: LevelSelectionScene
+            m_StringArgument: Level1Scene
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!222 &1641212513
@@ -4268,8 +4329,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000018039, y: -326}
-  m_SizeDelta: {x: 367.633, y: 265.384}
+  m_AnchoredPosition: {x: 8.576, y: -326}
+  m_SizeDelta: {x: 384.785, y: 265.384}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1790725947
 MonoBehaviour:
@@ -4308,7 +4369,7 @@ MonoBehaviour:
 
 
 
-    D   F    J   K'
+    D   F   J   K'
 --- !u!222 &1790725948
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4502,13 +4563,13 @@ MonoBehaviour:
         - m_Target: {fileID: 2131968912}
           m_TargetAssemblyTypeName: PauseMenuButtons, Assembly-CSharp
           m_MethodName: ChangeScene
-          m_Mode: 1
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: LevelSelectionScene
+            m_StringArgument: Level1Scene
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!222 &1908052455
