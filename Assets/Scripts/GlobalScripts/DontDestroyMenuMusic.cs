@@ -12,14 +12,7 @@ public class DontDestroyMenuMusic : MonoBehaviour
         float volume = PlayerPrefs.GetFloat("SavedMasterVolume");
         masterMixer.SetFloat("MasterVolume", Mathf.Log10(volume / 100) * 20f);
     }
-    void Update()
-    {
-        string sceneName = SceneManager.GetActiveScene().name;
-        if (sceneName == "GameScene")
-        {
-            Destroy(gameObject);
-        }
-    }
+
     void Awake()
     {
         GameObject[] obj = GameObject.FindGameObjectsWithTag("MenuMusic");
