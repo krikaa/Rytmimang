@@ -7,6 +7,7 @@ public class Highscore : MonoBehaviour
 {
     public Text scoreText;
     public Text gradeText;
+    public GameObject noAttemptsText;
     public string level;
     public string grade;
     public float highscore;
@@ -17,15 +18,16 @@ public class Highscore : MonoBehaviour
         level = gameObject.name;
         highscore = PlayerPrefs.GetFloat(level + "Highscore");
         grade = PlayerPrefs.GetString(level + "Grade");
-        if (highscore > 0 )
+        if (highscore > 0)
         {
-            scoreText.text = "hiGHscOrE:         " + highscore;
+            noAttemptsText.SetActive(false);
+            scoreText.text = "" + highscore;
             gradeText.text = grade + " /";
         }
         else
         {
-            scoreText.text = "hiGHscOrE:   nO AttEMpts";
-            gradeText.text = " ";
+            scoreText.text = "";
+            gradeText.text = "";
         }
     }
 }
