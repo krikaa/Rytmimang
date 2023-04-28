@@ -25,19 +25,19 @@ public class ButtonDetections : MonoBehaviour
 
                 switch(Mathf.Abs(transform.position.y))                                                  // tuvastab 2ra kauguse noodi ja noole vahel
                 {
-                    case (> 0.30f):                                                                      // halvimal juhul BadHit
+                    case (> 0.19f):                                                                      // halvimal juhul BadHit
                         GameManager.instance.BadHit();                                                   // loeb sisse halva tabamuse
                         Instantiate(badEffect, transform.position, badEffect.transform.rotation);        // tekitab visuaalse tagasiside 6igesse kohta
                         Debug.Log("Bad");
                         break;
 
-                    case (> 0.15f):                                                                      // natuke paremal juhul GoodHit
+                    case (> 0.13f):                                                                      // natuke paremal juhul GoodHit
                         GameManager.instance.GoodHit();                                                  // loeb sisse hea tabamuse
                         Instantiate(goodEffect, transform.position, goodEffect.transform.rotation);      // tekitab visuaalse tagasiside 6igesse kohta
                         Debug.Log("Good");
                         break;
 
-                    case (<= 0.15f):                                                                     // parimal juhul PerfectHit
+                    case (<= 0.13f):                                                                     // parimal juhul PerfectHit
                         GameManager.instance.PerfectHit();                                               // loeb sisse perfektse tabamuse
                         Instantiate(perfectEffect, transform.position, perfectEffect.transform.rotation);// tekitab visuaalse tagasiside 6igesse kohta
                         Debug.Log("Perfect");
