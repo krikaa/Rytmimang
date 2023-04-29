@@ -310,7 +310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcd6dd5fa06c4f24a8209f90b7951aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: Level1Scene
+  sceneToLoad: ImportScene
   ButtonIMG: {fileID: 1446819551}
   ButtonAudio: {fileID: 952087761}
   pauseUI: {fileID: 0}
