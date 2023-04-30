@@ -48,3 +48,6 @@ TagManager:
   - name: Beatmap
     uniqueID: 1923582325
     locked: 0
+  - name: Effects
+    uniqueID: 2524889199
+    locked: 0

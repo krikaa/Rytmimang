@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 196027420719037720}
   - component: {fileID: 196027420719037703}
   - component: {fileID: 9196894354460314505}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: BadEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,8 +71,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1770078097
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 1456216114, guid: 51fa758205a2a9041b0e71d0e7f04217, type: 3}
   m_Color: {r: 0.5, g: 0.34445167, b: 0.10613209, a: 0.8}
