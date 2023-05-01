@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
 
-public class SoundSettings : MonoBehaviour // ajutine kood @AIAdev poolt YouTube's
+public class SoundSettings : MonoBehaviour                          // NB! KOOD ON @AIAdev POOLT YouTube's
 {
     [SerializeField] Slider soundSlider;
     [SerializeField] AudioMixer masterMixer;

@@ -10,33 +10,33 @@ public class LevelButtonController : MonoBehaviour
     public Image levelButtonIMG;
     public AudioSource levelButtonAudio;
 
-    Color lowerOpacity = new Color(255, 255, 255, 0.75f);
-    Color lowerOpacityPurple = new Color(0.43f, 0.78f, 1, 0.75f);
-    Color imgOriginalColor = Color.white;
+    Color lowerOpacity = new Color(255, 255, 255, 0.75f);                   // valge v2rv j2tab pildil originaalv2rvi, viimane v22rtus v2hendab l2bipaistvust
+    Color lowerOpacityPurple = new Color(0.43f, 0.78f, 1, 0.75f);           // tumedam lilla v2rv koos v2iksema l2bipaistvusega
+    Color imgOriginalColor = Color.white;                                   // valge v2rv t2hendab pildil originaalv2rvi
 
-    public void ReduceOpacityAndDarken()
+    public void ReduceOpacityAndDarken()                                    // funktsioon animatsiooni jaoks, v2hendab l2bipaistvust ja teeb nupu tumedamaks
     {
-        levelButtonIMG.GetComponent<Image>().color = lowerOpacityPurple;
-        levelButtonAudio.GetComponent<AudioSource>();
-        levelButtonAudio.Play();
-        Debug.Log("Level 1 clicked");
+        levelButtonIMG.GetComponent<Image>().color = lowerOpacityPurple;    // funktsioon level nupu pildi v2rvi muutmiseks
+        levelButtonAudio.GetComponent<AudioSource>();                       // SelectSoundi tuvastamine
+        levelButtonAudio.Play();                                            // SelectSoundi m2ngimine
+        Debug.Log("Level button clicked");
     }
-    public void ChangeToOriginalColor()
+    public void ChangeToOriginalColor()                                     // funktsioon animatsiooni jaoks
     {
-        levelButtonIMG.GetComponent<Image>().color = imgOriginalColor;
+        levelButtonIMG.GetComponent<Image>().color = imgOriginalColor;      // level nupu muutmine originaalv2rvile
     }
-    public void ReduceOpacity()
+    public void ReduceOpacity()                                             // funktsioon animatsiooni jaoks
     {
-        levelButtonIMG.GetComponent<Image>().color = lowerOpacity;
+        levelButtonIMG.GetComponent<Image>().color = lowerOpacity;          // level nupul l2bipaistvuse v2hendamine
     }
-    public void ChangeScene(string sceneToLoad)
-    {
-        GameObject objectToDelete = GameObject.Find("BackButtonSFX");
-        GameObject objectToDelete2 = GameObject.Find("BackgroundCanvas");
+    public void ChangeScene(string sceneToLoad)                             // stseenivahetuse funktsioon
+    {                                                                       // ylearuse BackButtonSFXi h2vitamine (ajutine lahendus duplikaat
+        GameObject objectToDelete = GameObject.Find("BackButtonSFX");       // DontDestroyOnLoad objektide haldamiseks) 
+        GameObject objectToDelete2 = GameObject.Find("BackgroundCanvas");   // menyy tausta tuvastamine
         Destroy(objectToDelete);
-        SceneManager.LoadScene(sceneToLoad);
-        if (sceneToLoad == "ImportScene" ||
-            sceneToLoad == "Level1Scene" ||
+        SceneManager.LoadScene(sceneToLoad);                                // j2rgmise stseeni laadimise funktsioon
+        if (sceneToLoad == "ImportScene" ||                                 // kui avatakse m6ni nendest stseenidest, h2vitatakse menyy taustapilt,
+            sceneToLoad == "Level1Scene" ||                                 // sest levelis on erinev taust menyyst
             sceneToLoad == "Level2Scene" ||
             sceneToLoad == "Level3Scene")
         {
