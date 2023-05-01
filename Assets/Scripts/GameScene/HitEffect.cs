@@ -15,6 +15,6 @@ public class HitEffect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Destroy(gameObject, effectTime);
+        Destroy(gameObject, effectTime);    //H2vitab objekti sekund peale selle tekkimist
     }
 }
