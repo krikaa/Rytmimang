@@ -9,7 +9,7 @@ public class ButtonControls : MonoBehaviour
     private Color defaultColor = Color.white;
     private Color pressedColor = new Color(0.8862f, 0.2549f, 1, 1);
 
-    public List<KeyCode> keyBind;
+    public List<KeyCode> keyBind;                      // list erinevate klahvide jaoks
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +32,7 @@ public class ButtonControls : MonoBehaviour
         }
     }
 
-    public static bool GetAnyKeyDown(List<KeyCode> aCodes)
+    public static bool GetAnyKeyDown(List<KeyCode> aCodes)  // funktsioon, mis kontrollib, kas KeyCodede listist on m6ni nupp alla vajutatud
     {
         for (int i = 0; i < aCodes.Count; i++)
             if (Input.GetKeyDown(aCodes[i]))
@@ -40,7 +40,7 @@ public class ButtonControls : MonoBehaviour
         return false;
     }
 
-    public static bool GetAnyKeyUp(List<KeyCode> aCodes)
+    public static bool GetAnyKeyUp(List<KeyCode> aCodes)  // funktsioon, mis kontrollib, kas KeyCodede listist on m6ni nupp mittevajutatud
     {
         for (int i = 0; i < aCodes.Count; i++)
             if (Input.GetKeyUp(aCodes[i]))
